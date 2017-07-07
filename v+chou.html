@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>V+抽奖</title>
+
+	<link rel="shortcut icon" href="favicon.ico" />
+
+<link rel="stylesheet" type="text/css" href="css/v+chou.css">
+<script src="js/jquery-1.11.0.min.js" type="text/javascript"></script>
+
+
+ <script type="text/javascript">
+var namelist=[
+"200V币","100V币","50V币","300V币","400V币","500V币","1000V币","LED台灯","未中奖"];
+var mytime=null;
+function doit(){
+var bt=window.document.getElementById("bt");
+if(mytime==null){
+	bt.innerHTML="停止抽奖";
+	show();                    
+}else{
+	bt.innerHTML="开始抽奖";
+	clearTimeout(mytime);
+	mytime=null;                    
+}
+}
+function show(){
+var box=window.document.getElementById("box");
+var num=Math.floor((Math.random()*100000))%namelist.length;
+box.innerHTML=namelist[num];
+mytime=setTimeout("show()",1);
+} 
+</script> 
+</head>
+
+<body style="background:url(img/choubg.jpg) no-repeat;">
+
+
+<!--top B-->
+<div class="top">
+	<div class="t_left">
+		<div class="t_l_img">
+			<img class="iimg" src="img/logo.jpg">
+		</div>
+	</div>
+
+	<div class="t_right">
+		<input class="inp" type="text" placeholder="请输入关键字"></input><input class="but" type="button" value="搜索">
+		</input>
+		</div>
+	</div>
+</div>
+<!--top E-->
+
+
+<!--top B-->
+<div class="nav banxin">
+	<ul>
+		<li><a href="index.html" >首页</a></li>
+		<li><a href="#">V+产品</a></li>
+		<li><a href="gobuy.html">房屋选购</a></li>
+		<li><a href="offer.html">邀约看房</a></li>
+		<li><a href="#">V+社交</a></li>
+		<li><a href="v+chou">V+抽奖</a></li>
+
+	</ul>
+
+</div>
+
+<div class="main_box">
+<div id="box">亲，准备好抽奖了吗？</div>
+	<div id="bt" onClick="doit()">开始抽奖</div>
+
+<!--弹出层开始-->
+<script type="text/javascript">
+//弹出隐藏层
+function ShowDiv(show_div,bg_div){
+document.getElementById(show_div).style.display='block';
+document.getElementById(bg_div).style.display='block' ;
+var bgdiv = document.getElementById(bg_div);
+bgdiv.style.width = document.body.scrollWidth;
+// bgdiv.style.height = $(document).height();
+$("#"+bg_div).height($(document).height());
+};
+//关闭弹出层
+function CloseDiv(show_div,bg_div){
+document.getElementById(show_div).style.display='none';
+document.getElementById(bg_div).style.display='none';
+};
+</script>
+
+
+<input id="Button1" type="button" value="确定提交" onclick="ShowDiv('MyDiv','fade')" />
+<!--弹出层时背景层DIV-->
+<div id="fade" class="black_overlay">
+</div>
+<div id="MyDiv" class="white_content">
+<div style="text-align: right; cursor: default; height: 40px;">
+<span  onclick="CloseDiv('MyDiv','fade')"><img style="cursor: pointer;" src="img/closehdtipper.png"></span>
+</div>
+<p>亲，您抽到的奖品信息已发送至V+管家的手里，请至前台领取~</p>
+</div>
+
+
+</div>
+
+
+       
+</body>
+</html>

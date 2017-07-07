@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>邀约看房</title>
+	<link rel="shortcut icon" href="favicon.ico" />
+	<link rel="stylesheet" type="text/css" href="css/offer.css">
+
+</head>
+<body>
+	<!--top B-->
+<div class="top">
+	<div class="t_left">
+		<div class="t_l_img">
+			<img class="iimg" src="img/logo.jpg">
+		</div>
+	</div>
+
+	<div class="t_right">
+		<input class="inp" type="text" placeholder="请输入关键字"><input class="but" type="button" value="搜索">
+		</input>
+		</div>
+	</div>
+</div>
+<!--top E-->
+
+
+<!--nav B-->
+<div class="nav banxin">
+	<ul>
+		<li><a href="index.html">首页</a></li>
+		<li><a href="V+product.html">V+产品</a></li>
+		<li><a href="gobuy.html">房屋选购</a></li>
+		<li><a href="offer.html">预约看房</a></li>
+		<li><a href="#">V+社交</a></li>
+		<li><a href="v+chou.html">V+抽奖</a></li>
+
+	</ul>
+
+</div>
+<!--nav E-->
+<!--center B-->
+   <div class="center banxin">
+   	<h4>工作心定义居办一体化</h4>
+   	<h3>让梦想驻家</h3>
+   </div>
+<!--center E-->
+<!--foot B-->
+<div class="footer">
+	<div class="footer_info">
+		<input type="text" placeholder="姓名">
+		<input type="text" placeholder="手机号">
+		<input type="text" placeholder="邮箱(选填)">
+		<!-- <input class="yu" type="button" value="预约参观"/> -->
+
+       <!--弹出层开始-->
+<script type="text/javascript">
+//弹出隐藏层
+function ShowDiv(show_div,bg_div){
+document.getElementById(show_div).style.display='block';
+document.getElementById(bg_div).style.display='block' ;
+var bgdiv = document.getElementById(bg_div);
+bgdiv.style.width = document.body.scrollWidth;
+// bgdiv.style.height = $(document).height();
+$("#"+bg_div).height($(document).height());
+};
+//关闭弹出层
+function CloseDiv(show_div,bg_div){
+document.getElementById(show_div).style.display='none';
+document.getElementById(bg_div).style.display='none';
+};
+</script>
+
+
+<input id="Button1" type="button" value="预约看房" onclick="ShowDiv('MyDiv','fade')" />
+<!--弹出层时背景层DIV-->
+<div id="fade" class="black_overlay">
+</div>
+<div id="MyDiv" class="white_content">
+<div style="text-align: right; cursor: default; height: 40px;">
+<span  onclick="CloseDiv('MyDiv','fade')"><img style="cursor: pointer;" src="img/closehdtipper.png"></span>
+</div>
+<p>您的预约消息已反馈到后台，我们的工作人员会尽快与您联系，请您耐心等待</p>
+</div>
+
+
+</div>
+
+
+
+
+
+	</div>
+</div>
+<!--foot E-->
+</body>
+</html>

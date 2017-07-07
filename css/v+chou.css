@@ -1,0 +1,171 @@
+*{
+	margin: 0px;
+	padding: 0px;
+}
+.banxin{
+	width: 980px;
+	margin: 0 auto;
+}
+li{
+	list-style: none;
+}
+a {
+	text-decoration: none;
+}
+
+/*top B*/
+.top{
+	width: 980px;
+	height: 100px;
+	margin: 0 auto;
+}
+.t_left .t_l_img{
+	float: left;
+	margin-top: 8px;
+}
+.t_left .t_l_img .iimg{
+	width: 80px;
+	height: 80px;
+	border-radius: 50%;
+}
+.t_right {
+	float: right;
+	margin-top: 25px;
+}
+.t_right .inp{
+	width: 220px;
+	height: 30px;
+}
+.t_right .but{
+	width: 50px;
+	height: 34px;
+}
+/*top E*/
+
+/*nav B*/
+.nav{
+	
+	height: 40px;
+	margin-top: 10px;
+	background: #e75700;
+	overflow: hidden;
+}
+.nav ul{
+	line-height: 40px;
+	margin-left: 100px;
+}
+.nav li{
+	line-height: 40px;
+	display: inline-block;
+}
+.nav a{
+	display: inline-block;
+	text-decoration: none;
+	color: white;
+	padding: 0px 45px;
+}
+.nav a:hover{
+	background:cadetblue;
+}
+/*nav E*/
+
+/*choujiang B*/
+.main_box{
+	width: 800px;
+	height: 400px;
+	margin: 0 auto;
+	text-align: center;
+}
+       #box{
+       	margin:auto;
+       	width:660px;
+       	font-size:66px;
+       	height:150px;
+       	line-height:150px;
+       	overflow:hidden;
+       	color:#138eee;
+       	text-align:center;
+       	padding:0 30px;
+       	margin-top:99px;
+       	background:#E6E6E6;
+        opacity: 0.6;/*设置透明*/
+       }
+       #bt{
+        margin:auto;
+       	width:200px;
+       	text-align:center;
+       	color:#e75700;
+       	font-size:25px;
+       	line-height:28px;
+       	cursor:pointer;
+       	margin-top: 20px;
+       
+      
+        
+       }
+       /*choujiang E*/
+
+
+/*tan B*/
+
+#Button1{
+  margin-top: 20px;
+  background: #e75700;
+  color: white;
+  border:none;
+  cursor: pointer;
+  font-size: 16px;
+  width: 80px;
+  height: 25px;
+  text-align: center;
+  line-height: 25px;
+}
+
+.black_overlay{
+display: none;
+position: absolute;
+top: 0%;
+left: 0%;
+width: 100%;
+height: 100%;
+background-color: black;
+z-index:1001;
+-moz-opacity: 0.8;
+opacity:.80;
+filter: alpha(opacity=80);
+}
+.white_content {
+display: none;
+position: absolute;
+top: 20%;
+left: 50%;
+width: 400px;
+margin-left: -200px;
+height: 300px;
+border: 1px solid lightblue;
+background-color: white;
+z-index:1002;
+overflow: auto;
+}
+.white_content_small {
+display: none;
+position: absolute;
+top: 20%;
+left: 30%;
+width: 40%;
+height: 50%;
+border: 16px solid lightblue;
+background-color: white;
+z-index:1002;
+overflow: auto;
+}
+#MyDiv p{
+	font-size: 16px;
+	color: #e75700;
+	font-weight: 600;
+	line-height: 30px;
+	margin-top: 30px;
+}
+/*tan E*/
+
+
